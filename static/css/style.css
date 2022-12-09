@@ -1,0 +1,195 @@
+body {
+  background-color: rgb(242,231,214);
+}
+
+h1 {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  font-family: 'Kreon';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 63px;
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+h2 {
+  margin: auto;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  color: #000000;
+
+}
+
+a {
+  margin: auto;
+  width: 50%;
+  margin-left: 45%;
+  margin-right: 30%;
+  text-align: center;
+  align-items: center;
+  color: #D0481E;
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.button {
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
+  background-color: #FFEC3D;
+  display: inline-block;
+  border-radius: 10px;
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  transition: all 0.5s;
+  cursor: pointer;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.library-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 54px 40px 23px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  }
+
+.framework-logo {
+  width: 24.32%;
+  height: 27.49%;
+  background-color: var(--gainsboro);
+  border-radius: 10px;
+  }
+
+.relative-wrapper-one {
+  width: 73.56%;
+  height: 20.96%;
+  margin-bottom: 37px;
+  position: relative;
+  }
+
+.framework-name {
+  height: 100%;
+  width: 100%;
+  font-family: "Kreon";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  position: relative;
+  }
+  
+.flex-wrapper-one {
+  background-color: var(--light-salmon);
+  border-radius: 5px;
+  padding: 8px 4px 7px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: -23px;
+  }
+  
+.tag-1-name {
+  font-family: "Cabin";
+  font-size: 12px;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--gray);
+  flex: 1;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  }
+
+  .flex-wrapper-two {
+  background-color: var(--light-sky-blue);
+  border-radius: 5px;
+  padding: 8px 2px 7px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 14px;
+  bottom: -23px;
+  }
+  
+.flex-wrapper-three {
+  background-color: var(--navajo-white);
+  border-radius: 5px;
+  padding: 8px 0 7px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: -107px;
+  bottom: -23px;
+  }
+  
+.description-text {
+  height: 38.83%;
+  width: 98.48%;
+  font-family: "Cabin";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  }
