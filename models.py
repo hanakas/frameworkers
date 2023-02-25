@@ -38,7 +38,6 @@ class Option(db.Model):
     def __repr__(self):
         return f"Option('{self.option}')"
 
-
 @db.event.listens_for(Question.__table__, 'after_create', once=True)
 def insert_questions(*args, **kwargs):
     Questions= [['Has your product already been released to a market in any form (i.e. Alpha, Beta, Official release)?', 1, 2],
