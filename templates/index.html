@@ -4,17 +4,17 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}"/>
     <link href="https://fonts.googleapis.com/css2?family=Kreon&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Kreon&display=swap" rel="stylesheet">
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Frameworkers</title>
   </head>
+  <div class="header">
+    <img src="{{url_for('static', filename='logo.jpg')}}" alt="Frameworkers Logo" width="200" height="50"/>
+    <a href="/library">Framework Library</a>
+  </div>
   <body>
-    <img src="{{url_for('static', filename='logo.jpg')}}" alt="Frameworkers Logo" width="240" height="50"/>
     <h1>Find the right product framework.</h1>
     <h2>Learn which of the 30+ product frameworks would be the best match for your use.</h2>
-    <button type="button" onclick="window.location='question';" class="button"><span>Get Started</span></button>
-    <br> 
-    <a href="/library">See all frameworks →</a>
+    <button type="button" onclick="window.location='q';" class="button"><span>Get Started</span></button>
   </body>
 </html>

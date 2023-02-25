@@ -1,25 +1,21 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Frameworkers</title>
-  </head>
-  <body>
-    <!-- Display a question and their options-->
-    <div class="align">
-      <table>
-          <thead>
-              <tr>
-                  <th id="question" colspan="2" scope="col"></th>
-              </tr>
-          </thead>
-      </table>
+{% extends "base.html" %}
+{% block title %}Questions{% endblock %}
+{% block content %}
+<body>
+  <h3>{{ question.question }}</h3>
+  <form action="{{ url_for('response') }}" method="POST">
+  <div class="container">
+    <div class="center">
+      <!-- Show option (name) of option 1  and output the next question id -->
+      <button type="submit" name="clck" value=0>{{ option.query.get(question.option1).option }}</button>
+      <input type="hidden" name="next_q1" value="{{ option.query.get(question.option1).next_question_id }}">
+      <input type="hidden" name="framework1" value="{{ option.query.get(question.option1).framework_id }}">
+      <!-- Show option (name) of option 2 and output the next question id -->
+      <button type="submit" name="clck" value=1>{{ option.query.get(question.option2).option }}</button>
+      <input type="hidden" name="next_q2" value="{{ option.query.get(question.option2).next_question_id }}">
+      <input type="hidden" name="framework2" value="{{ option.query.get(question.option2).framework_id }}">
+    </div>
   </div>
-    <form action="" method="">          
-      <td><button type="submit" class="button" name="response" id="option1"value=""></button></td>
-      <td><button type="submit" class="button" name="response" id="option2"value=""></button></td>                    
   </form>
-  </body>
-</html>
+</body>
+{% endblock %}

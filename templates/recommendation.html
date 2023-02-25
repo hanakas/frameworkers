@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}Recommendation{% endblock %}
+{% block content %}
+<body>
+  <div class="p-4 mx-5 my-3 bg-light rounded-4">
+    <div class="container-fluid p-4">
+      <div class="row">
+        <div class="col-1 align-items-center">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3 mt-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-kanban" viewBox="0 0 16 16">
+              <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h11zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-11z"/>
+              <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="col-9">
+          <h6>{{ recommendation.framework_name }}</h6>
+          <p>Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-3 mx-5 my-3 border rounded-4">
+    <div class="container-fluid">
+      <h4>Summary</h4>
+      <p>Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+    </div>
+  </div>
+  <div class="row align-items-md-stretch">
+    <div class="col-md-6">
+      <div class="h-100 p-4 mx-5 my-3 border rounded-4">
+        <h4>How to use</h4>
+        <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="h-100 mx-5 my-3 p-4 border rounded-4">
+        <h4>Example</h4>
+        <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
+      </div>
+    </div>
+  </div>
+  <h3>Similar Frameworks</h3>
+  <div class="row row-cols-1 row-cols-md-3 g-4 p-3">
+    <div class="col">
+      <div class="card h-100 mx-2 my-2">
+        <div class="card-body">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-kanban" viewBox="0 0 16 16">
+              <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h11zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-11z"/>
+              <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3z"/>
+            </svg>
+          </div>
+          <h5 class="card-title">Framework Name</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn btn-dark">Read more</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 mx-2 my-2">
+        <div class="card-body">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-kanban" viewBox="0 0 16 16">
+              <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h11zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-11z"/>
+              <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3z"/>
+            </svg>
+          </div>
+          <h5 class="card-title">Framework Name</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn btn-dark">Read more</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 mx-2 my-2">
+        <div class="card-body">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-kanban" viewBox="0 0 16 16">
+              <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h11zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-11z"/>
+              <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3z"/>
+            </svg>
+          </div>
+          <h5 class="card-title">Framework Name</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn btn-dark">Read more</a>
+        </div>
+      </div>
+    </div>
+  <div class="container">
+      <div class="center">
+        <button type="button" onclick="location.href='/library'">See more</button>
+      </div>
+  </div>
+</body>
+{% endblock %}

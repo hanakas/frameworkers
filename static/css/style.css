@@ -2,6 +2,31 @@ body {
   background-color: rgb(242,231,214);
 }
 
+.header {
+  overflow: hidden;
+  background-color: rgb(242,231,214);
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  margin: 0;
+  text-align: right;
+  margin-right: 10px;
+  color: black;
+  font-family: 'Kreon';
+}
+
+p {
+  color: black;
+  font-family: Sans-Serif;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
 h1 {
   margin: auto;
   width: 50%;
@@ -23,7 +48,7 @@ h2 {
   width: 40%;
   margin-left: 30%;
   margin-right: 30%;
-  font-family: 'Cabin';
+  font-family: Sans-Serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -38,18 +63,41 @@ h2 {
 
 }
 
-a {
-  margin: auto;
-  width: 50%;
-  margin-left: 45%;
-  margin-right: 30%;
+h3 {
   text-align: center;
-  align-items: center;
-  color: #D0481E;
-  font-family: 'Cabin';
+  font-family: 'Kreon';
   font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
+  font-size: 30px;
+  align-items: center;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+h4 {
+  text-align: left;
+  font-family: 'Kreon';
+  font-style: normal;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  color: #000000;
+}
+
+h5 {
+  font-family: 'Kreon';
+  font-style: normal;
+  color: #000000;
+}
+
+h6 {
+  font-family: 'Kreon';
+  font-style: bold;
+  color: #000000;
+  font-size: 50px;
+  margin-left: 10px;
 }
 
 .button {
@@ -59,7 +107,7 @@ a {
   background-color: #FFEC3D;
   display: inline-block;
   border-radius: 10px;
-  font-family: 'Cabin';
+  font-family: Sans-Serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -74,6 +122,7 @@ a {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 .button span {
   cursor: pointer;
   display: inline-block;
@@ -99,97 +148,35 @@ a {
   right: 0;
 }
 
-.library-card {
-  background-color: var(--white);
-  border-radius: 10px;
-  padding: 54px 40px 23px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  }
-
-.framework-logo {
-  width: 24.32%;
-  height: 27.49%;
-  background-color: var(--gainsboro);
-  border-radius: 10px;
-  }
-
-.relative-wrapper-one {
-  width: 73.56%;
-  height: 20.96%;
-  margin-bottom: 37px;
-  position: relative;
-  }
-
-.framework-name {
-  height: 100%;
-  width: 100%;
-  font-family: "Kreon";
-  font-size: 30px;
-  font-weight: 700;
-  line-height: normal;
-  color: var(--black);
-  display: flex;
-  align-items: center;
-  position: relative;
-  }
-  
-.flex-wrapper-one {
-  background-color: var(--light-salmon);
-  border-radius: 5px;
-  padding: 8px 4px 7px;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  left: 0;
-  bottom: -23px;
-  }
-  
-.tag-1-name {
-  font-family: "Cabin";
-  font-size: 12px;
-  font-weight: 700;
-  line-height: normal;
-  color: var(--gray);
-  flex: 1;
-  align-self: stretch;
-  display: flex;
+button {
+  background-color: rgb(242,231,214);
+  border: 1px solid black;;
   align-items: center;
   text-align: center;
-  }
-
-  .flex-wrapper-two {
-  background-color: var(--light-sky-blue);
-  border-radius: 5px;
-  padding: 8px 2px 7px;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  right: 14px;
-  bottom: -23px;
-  }
-  
-.flex-wrapper-three {
-  background-color: var(--navajo-white);
-  border-radius: 5px;
-  padding: 8px 0 7px;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  right: -107px;
-  bottom: -23px;
-  }
-  
-.description-text {
-  height: 38.83%;
-  width: 98.48%;
-  font-family: "Cabin";
+  text-decoration: none;
+  font-family: Sans-Serif;
+  color: black;
+  display: inline-block;
   font-size: 20px;
-  font-weight: 400;
-  line-height: normal;
-  color: var(--black);
+  margin: 20px;
+  padding: 20px 32px;
+  border-radius: 15px;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.container {
+  height: 200px;
+  position: relative;
+}
+
+.center {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-left: 5px;
-  }
+  margin-top: 30px;
+}
