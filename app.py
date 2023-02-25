@@ -53,3 +53,6 @@ def response():
 def framework(recommendation_id):
     recommendation = Framework.query.get(recommendation_id)
     return render_template('recommendation.html', recommendation=recommendation)
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=5000)
