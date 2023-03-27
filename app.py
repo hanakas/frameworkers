@@ -4,15 +4,15 @@ from flask import render_template, request, redirect, url_for
 #from models import db, Question, Option, Framework,insert_questions, insert_options, insert_frameworks
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer, Float, Date, Table, Integer, String, MetaData
-#from flask_migrate import Migrate
+from flask_migrate import Migrate
 
 app = Flask(__name__)
 ## configure the SQLite database, relative to the app instance folder
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config["SQLALCHEMY_DATABASE_URI"] = 'postgres://lbpuesgrgxtroy:c69c3611357041d19bfc89da2f6d757a5296901d40404c7ea29921cc83255672@ec2-54-208-11-146.compute-1.amazonaws.com:5432/dfih8c05rr38m0'
+app.config["SQLALCHEMY_DATABASE_URI"] = 'postgresql://lbpuesgrgxtroy:c69c3611357041d19bfc89da2f6d757a5296901d40404c7ea29921cc83255672@ec2-54-208-11-146.compute-1.amazonaws.com:5432/dfih8c05rr38m0'
 #app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///Frameworkers.sqlite3'
 db = SQLAlchemy(app)
-#migrate = Migrate(app, db)
+migrate = Migrate(app, db)
 #db.init_app(app)
 
 #Recommended framework based on the selected options
@@ -147,13 +147,6 @@ def insert_frameworks(*args, **kwargs):
         db.session.add(Framework(framework_name=i[0], icon=i[1], description=i[2]))
     db.session.commit()
 
-with app.app_context():
-    db.drop_all()
-    db.create_all()
-    insert_questions()
-    insert_options()
-    insert_frameworks()
-
 #Create a route decorator 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -202,3 +195,11 @@ def framework(recommendation_id):
     recommendation = Framework.query.get(recommendation_id)
     icon = recommendation.icon
     return render_template('recommendation.html', recommendation=recommendation, icon=icon)
+
+if __name__=="__main__":
+    #db.drop_all()
+    db.create_all()
+    insert_questions()
+    insert_options()
+    insert_frameworks()
+    app.run(debug=True)
