@@ -1,18 +1,15 @@
 import os
 from flask import Flask
-from flask_session import Session
 from flask import render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer, Float, Date, Table, Integer, String, MetaData
-from flask_migrate import Migrate
 
 app = Flask(__name__)
 
 ## configure the SQLite database, relative to the app instance folder
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config["SQLALCHEMY_DATABASE_URI"] = 'postgres://lbpuesgrgxtroy:c69c3611357041d19bfc89da2f6d757a5296901d40404c7ea29921cc83255672@ec2-54-208-11-146.compute-1.amazonaws.com:5432/dfih8c05rr38m0'
+app.config["SQLALCHEMY_DATABASE_URI"] = 'postgresql://lbpuesgrgxtroy:c69c3611357041d19bfc89da2f6d757a5296901d40404c7ea29921cc83255672@ec2-54-208-11-146.compute-1.amazonaws.com:5432/dfih8c05rr38m0'
 db = SQLAlchemy(app)
-migrate = Migrate(app, db)
 
 #Recommended framework based on the selected options
 class Framework(db.Model):
@@ -102,6 +99,7 @@ def framework(recommendation_id):
     return render_template('recommendation.html', recommendation=recommendation, icon=icon)
 
 with app.app_context():
+    db.drop_all()
     db.create_all()
     
     @db.event.listens_for(Question.__table__, 'after_create', once=True)
