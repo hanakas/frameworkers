@@ -203,6 +203,6 @@ with app.app_context():
             db.session.add(Framework(id=i[0],framework_name=i[1], icon=i[2], description=i[3]))
         db.session.commit()
     
-    # insert_frameworks()
-    # insert_options()
-    # insert_questions()
+    insert_frameworks()
+    insert_options()
+    insert_questions()
