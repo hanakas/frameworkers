@@ -10,8 +10,7 @@ app = Flask(__name__)
 
 ## configure the SQLite database, relative to the app instance folder
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config["SQLALCHEMY_DATABASE_URI"] = 'postgresql://lbpuesgrgxtroy:c69c3611357041d19bfc89da2f6d757a5296901d40404c7ea29921cc83255672@ec2-54-208-11-146.compute-1.amazonaws.com:5432/dfih8c05rr38m0'
-
+app.config["SQLALCHEMY_DATABASE_URI"] = 'postgres://lbpuesgrgxtroy:c69c3611357041d19bfc89da2f6d757a5296901d40404c7ea29921cc83255672@ec2-54-208-11-146.compute-1.amazonaws.com:5432/dfih8c05rr38m0'
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
@@ -200,13 +199,13 @@ with app.app_context():
             db.session.add(Framework(id=i[0],framework_name=i[1], icon=i[2], description=i[3]))
         db.session.commit()
     
-    # insert_frameworks()
-    # insert_options()
-    # insert_questions()
-
-if __name__=="__main__":
-    db.create_all()
-    insert_questions()
-    insert_options()
     insert_frameworks()
-    app.run(debug=True)
+    insert_options()
+    insert_questions()
+
+# if __name__=="__main__":
+#     db.create_all()
+#     insert_questions()
+#     insert_options()
+#     insert_frameworks()
+#     app.run(debug=True)
