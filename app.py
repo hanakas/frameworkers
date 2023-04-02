@@ -205,4 +205,8 @@ with app.app_context():
     # insert_questions()
 
 if __name__=="__main__":
+    db.create_all()
+    insert_questions()
+    insert_options()
+    insert_frameworks()
     app.run(debug=True)
