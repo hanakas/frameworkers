@@ -116,7 +116,7 @@ h6 {
   align-items: center;
   text-align: center;
   color: #000000;
-  transition: all 0.5s;
+  transition: all 1s;
   cursor: pointer;
   border: none;
   margin-top: 20px;
@@ -170,7 +170,7 @@ button:hover {
 }
 
 .container {
-  height: 200px;
+  height: 150px;
   position: relative;
 }
 
@@ -179,4 +179,18 @@ button:hover {
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+}
+
+.button-more {
+  background-color: black;
+  border: 1px solid white;;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  font-family: Sans-Serif;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 15px;
+  transition-duration: 0.4s;
 }

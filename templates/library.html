@@ -6,13 +6,7 @@
     <div class="card-header">
       <ul class="nav nav-tabs card-header-tabs">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Category 1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Category 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Category 3</a>
+          <a class="nav-link active" href="#">All</a>
         </li>
       </ul>
     </div>
@@ -35,13 +29,10 @@
         <div class="card h-100 mx-2 my-2">
           <div class="card-body">
             <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-kanban" viewBox="0 0 16 16">
-                <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h11zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-11z"/>
-                <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3z"/>
-              </svg>
+              <img src="{{url_for('static', filename='hipe.svg')}}"/>
             </div>
-            <h5 class="card-title">Framework Name</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <h5 class="card-title">{{ framework.query.get(2).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(2).description }}</p>
           </div>
           <div class="card-footer">
             <a href="/framework/2" class="btn btn-dark">Read more</a>
@@ -52,16 +43,12 @@
         <div class="card h-100 mx-2 my-2">
           <div class="card-body">
             <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-kanban" viewBox="0 0 16 16">
-                <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h11zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-11z"/>
-                <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3z"/>
-              </svg>
+              <img src="{{url_for('static', filename='dibb.svg')}}"/>
             </div>
-            <h5 class="card-title">Framework Name</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
+            <h5 class="card-title">{{ framework.query.get(3).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(3).description }}</p></div>
           <div class="card-footer">
-            <a href="#" class="btn btn-dark">Read more</a>
+            <a href="/framework/3" class="btn btn-dark">Read more</a>
           </div>
         </div>
       </div>
@@ -69,16 +56,12 @@
         <div class="card h-100 mx-2 my-2">
           <div class="card-body">
             <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-kanban" viewBox="0 0 16 16">
-                <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h11zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-11z"/>
-                <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3z"/>
-              </svg>
+              <img src="{{url_for('static', filename='glee.svg')}}"/>
             </div>
-            <h5 class="card-title">Framework Name</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
+            <h5 class="card-title">{{ framework.query.get(4).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(4).description }}</p></div>
           <div class="card-footer">
-            <a href="#" class="btn btn-dark">Read more</a>
+            <a href="/framework/4" class="btn btn-dark">Read more</a>
           </div>
         </div>
       </div>
@@ -86,16 +69,12 @@
         <div class="card h-100 mx-2 my-2">
           <div class="card-body">
             <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-kanban" viewBox="0 0 16 16">
-                <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h11zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-11z"/>
-                <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3z"/>
-              </svg>
+              <img src="{{url_for('static', filename='user.svg')}}"/>
             </div>
-            <h5 class="card-title">Framework Name</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          </div>
+            <h5 class="card-title">{{ framework.query.get(5).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(5).description }}</p></div>
           <div class="card-footer">
-            <a href="#" class="btn btn-dark">Read more</a>
+            <a href="/framework/5" class="btn btn-dark">Read more</a>
           </div>
         </div>
       </div>
@@ -103,16 +82,38 @@
         <div class="card h-100 mx-2 my-2">
           <div class="card-body">
             <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-kanban" viewBox="0 0 16 16">
-                <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h11zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-11z"/>
-                <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3z"/>
-              </svg>
+              <img src="{{url_for('static', filename='peso.svg')}}"/>
             </div>
-            <h5 class="card-title">Framework Name</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          </div>
+            <h5 class="card-title">{{ framework.query.get(6).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(6).description }}</p></div>
           <div class="card-footer">
-            <a href="#" class="btn btn-dark">Read more</a>
+            <a href="/framework/6" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+      <div class="card h-100 mx-2 my-2">
+        <div class="card-body">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+            <img src="{{url_for('static', filename='peso.svg')}}"/>
+          </div>
+          <h5 class="card-title">{{ framework.query.get(7).framework_name }}</h5>
+          <p class="card-text">{{ framework.query.get(7).description }}</p></div>
+        <div class="card-footer">
+          <a href="/framework/7" class="btn btn-dark">Read more</a>
+        </div>
+      </div>
+    </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='circles.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(8).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(8).description }}</p></div>
+          <div class="card-footer">
+            <a href="/framework/8" class="btn btn-dark">Read more</a>
           </div>
         </div>
       </div>
@@ -120,16 +121,13 @@
         <div class="card h-100 mx-2 my-2">
           <div class="card-body">
             <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-kanban" viewBox="0 0 16 16">
-                <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h11zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-11z"/>
-                <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3z"/>
-              </svg>
+              <img src="{{url_for('static', filename='dau.svg')}}"/>
             </div>
-            <h5 class="card-title">Framework Name</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <h5 class="card-title">{{ framework.query.get(9).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(9).description }}</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-dark">Read more</a>
+            <a href="/framework/9" class="btn btn-dark">Read more</a>
           </div>
         </div>
       </div>
@@ -137,16 +135,316 @@
         <div class="card h-100 mx-2 my-2">
           <div class="card-body">
             <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-kanban" viewBox="0 0 16 16">
-                <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h11zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-11z"/>
-                <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3z"/>
-              </svg>
+              <img src="{{url_for('static', filename='aida.svg')}}"/>
             </div>
-            <h5 class="card-title">Framework Name</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <h5 class="card-title">{{ framework.query.get(10).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(10).description }}</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-dark">Read more</a>
+            <a href="/framework/10" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='hooked.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(11).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(11).description }}</p></div>
+          <div class="card-footer">
+            <a href="/framework/11" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='daci.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(12).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(12).description }}</p></div>
+          <div class="card-footer">
+            <a href="/framework/12" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='ptc.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(13).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(13).description }}</p></div>
+          <div class="card-footer">
+            <a href="/framework/13" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='heart.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(14).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(14).description }}</p></div>
+          <div class="card-footer">
+            <a href="/framework/14" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+      <div class="card h-100 mx-2 my-2">
+        <div class="card-body">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+            <img src="{{url_for('static', filename='nps.svg')}}"/>
+          </div>
+          <h5 class="card-title">{{ framework.query.get(15).framework_name }}</h5>
+          <p class="card-text">{{ framework.query.get(15).description }}</p></div>
+        <div class="card-footer">
+          <a href="/framework/15" class="btn btn-dark">Read more</a>
+        </div>
+      </div>
+    </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='wb.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(16).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(16).description }}</p></div>
+          <div class="card-footer">
+            <a href="/framework/16" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='cjm.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(17).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(17).description }}</p>
+          </div>
+          <div class="card-footer">
+            <a href="/framework/17" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='4d.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(18).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(18).description }}</p>
+          </div>
+          <div class="card-footer">
+            <a href="/framework/18" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='jtbd.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(19).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(19).description }}</p></div>
+          <div class="card-footer">
+            <a href="/framework/19" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='aarrr.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(20).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(20).description }}</p></div>
+          <div class="card-footer">
+            <a href="/framework/20" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='lc.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(21).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(21).description }}</p></div>
+          <div class="card-footer">
+            <a href="/framework/21" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='am.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(22).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(22).description }}</p></div>
+          <div class="card-footer">
+            <a href="/framework/22" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+      <div class="card h-100 mx-2 my-2">
+        <div class="card-body">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+            <img src="{{url_for('static', filename='ost.svg')}}"/>
+          </div>
+          <h5 class="card-title">{{ framework.query.get(23).framework_name }}</h5>
+          <p class="card-text">{{ framework.query.get(23).description }}</p></div>
+        <div class="card-footer">
+          <a href="/framework/23" class="btn btn-dark">Read more</a>
+        </div>
+      </div>
+    </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='qfd.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(24).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(24).description }}</p></div>
+          <div class="card-footer">
+            <a href="/framework/24" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='em.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(25).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(25).description }}</p>
+          </div>
+          <div class="card-footer">
+            <a href="/framework/25" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='okr.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(26).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(26).description }}</p>
+          </div>
+          <div class="card-footer">
+            <a href="/framework/26" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='ns.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(27).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(27).description }}</p></div>
+          <div class="card-footer">
+            <a href="/framework/27" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='gist.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(28).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(28).description }}</p></div>
+          <div class="card-footer">
+            <a href="/framework/28" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='666.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(29).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(29).description }}</p></div>
+          <div class="card-footer">
+            <a href="/framework/29" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='wis.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(30).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(30).description }}</p></div>
+          <div class="card-footer">
+            <a href="/framework/30" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='rice.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(31).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(31).description }}</p></div>
+          <div class="card-footer">
+            <a href="/framework/31" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='moscow.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(32).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(32).description }}</p></div>
+          <div class="card-footer">
+            <a href="/framework/32" class="btn btn-dark">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-2 my-2">
+          <div class="card-body">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="{{url_for('static', filename='kano.svg')}}"/>
+            </div>
+            <h5 class="card-title">{{ framework.query.get(33).framework_name }}</h5>
+            <p class="card-text">{{ framework.query.get(33).description }}</p></div>
+          <div class="card-footer">
+            <a href="/framework/33" class="btn btn-dark">Read more</a>
           </div>
         </div>
       </div>
