@@ -21,10 +21,8 @@
     <div class="container-fluid">
       <h4>What is it?</h4>
       <p>{{ recommendation.summary }}</p>
-      <div class="container">
         <div class="center">
-          <button type="button" onclick="location.href='/library';" class="button-more">Tell me more</button>
-        </div>
+          <a href="{{recommendation.what_resource}}" class="btn btn-dark">Tell me more</a>
     </div>
     </div>
   </div>
@@ -32,11 +30,9 @@
     <div class="container-fluid">
       <h4>How to use?</h4>
       <p>{{ recommendation.how_to_use }}</p>
-      <div class="container">
         <div class="center">
-          <button type="button" onclick="location.href='/library'" class="button-more">Tool for application</button>
+          <a href="{{recommendation.application_resource}}" class="btn btn-dark">Tool for application</a>
         </div>
-    </div>
     </div>
   </div>
   <h3>Similar Frameworks</h3>
@@ -44,6 +40,9 @@
     <div class="col">
       <div class="card h-100 mx-2 my-2">
         <div class="card-body">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+            <img src="{{url_for('static', filename=icon_1)}}"/>
+          </div>
           <h5 class="card-title">{{framework.query.get(recommendation.related_framework_1).framework_name}}</h5>
           <p class="card-text">{{framework.query.get(recommendation.related_framework_1).description}}</p>
         </div>
@@ -55,6 +54,9 @@
     <div class="col">
       <div class="card h-100 mx-2 my-2">
         <div class="card-body">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+            <img src="{{url_for('static', filename=icon_2)}}"/>
+          </div>
           <h5 class="card-title">{{framework.query.get(recommendation.related_framework_2).framework_name}}</h5>
           <p class="card-text">{{framework.query.get(recommendation.related_framework_2).description}}</p>
         </div>
@@ -66,6 +68,9 @@
     <div class="col">
       <div class="card h-100 mx-2 my-2">
         <div class="card-body">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+            <img src="{{url_for('static', filename=icon_3)}}"/>
+          </div>
           <h5 class="card-title">{{framework.query.get(recommendation.related_framework_3).framework_name}}</h5>
           <p class="card-text">{{framework.query.get(recommendation.related_framework_3).description}}</p>
         </div>

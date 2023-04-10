@@ -196,7 +196,10 @@ def framework(recommendation_id):
     recommendation = Framework.query.get(recommendation_id)
     icon = recommendation.icon
     framework = Framework
-    return render_template('recommendation.html', recommendation=recommendation, icon=icon, framework=framework)
+    icon_1 = Framework.query.get(recommendation.related_framework_1).icon
+    icon_2 = Framework.query.get(recommendation.related_framework_2).icon
+    icon_3 = Framework.query.get(recommendation.related_framework_3).icon
+    return render_template('recommendation.html', recommendation=recommendation, icon=icon, framework=framework, icon_1=icon_1,icon_2=icon_2,icon_3=icon_3)
 
 if __name__=="__main__":
     db.create_all()
